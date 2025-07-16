@@ -18,13 +18,17 @@
       color: #ff6600;
       margin-bottom: 1em;
     }
-    h2 {
-      color: #444;
-      margin-top: 2.5em;
-    }
     p {
       font-size: 1.0em;
       color: #333;
+      margin-bottom: 0.3em; /* tighten spacing before link */
+    }
+    .highlight {
+      color: #ff6600;
+      font-weight: bold;
+    }
+    .step-section {
+      margin-bottom: 4em;
     }
     .step-title {
       font-size: 1.6em;
@@ -33,18 +37,14 @@
       margin-bottom: 0.5em;
       font-weight: bold;
     }
-    .highlight {
-      color: #ff6600;
-      font-weight: bold;
-    }
     a.video-link {
-      font-size: 1.1em;
+      font-size: 1.0em;
       display: inline-block;
-      margin-top: 0.5em;
-      margin-bottom: 1em;
       color: #333;
       text-decoration: none;
       font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 0.5em;
     }
     a.video-link:hover {
       text-decoration: underline;
@@ -72,42 +72,38 @@
 
   <h1>How Antonii Works – 4 Simple Steps</h1>
   <p>Each step solves a common experimental challenge — and you can use them independently.</p>
-  
-  <br>
-  <br>
-  
-  <p><span class="highlight">Too many variables? Budget tight? Not sure what matters most?</span><br>
-  Antonii helps you narrow your focus based on your goal — so you can plan smarter from the start.</p>
-  <a class="video-link" href="https://youtu.be/XXGBmaqhook" target="_blank">
-    🔗 Brainstorm Variables: Watch 1-minute instruction video on YouTube
-  </a>
 
-  <br>
-  <br>
-  
-  <p><span class="highlight">Worried your experiment might be missing a control, or has hidden confounding?</span><br>
-  Antonii flags common design pitfalls before you begin — saving time, effort, and failed runs.</p>
-  <a class="video-link" href="https://youtu.be/lU3heCLoDms" target="_blank">
-    🔗 Quick Design Check: Watch 1-minute instruction video on YouTube
-  </a>
+  <section class="step-section">
+    <p><span class="highlight">Too many variables? Budget tight? Not sure what matters most?</span><br>
+    Antonii helps you narrow your focus based on your goal — so you can plan smarter from the start.</p>
+    <a class="video-link" href="https://youtu.be/XXGBmaqhook" target="_blank">
+      🔗 Brainstorm Variables: Watch 1-minute instruction video on YouTube
+    </a>
+  </section>
 
-  <br>
-  <br>
-  
-  <p><span class="highlight">Tight on budget? Too many combinations? Not sure what design to use?</span><br>
-  Antonii recommends a design that fits your goals and constraints — and generates a matrix if you're ready.</p>
-  <a class="video-link" href="https://youtu.be/_Q_alzUvZmg" target="_blank">
-    🔗 Design Experiment (DOE): Watch 1-minute instruction video on YouTube
-  </a>
+  <section class="step-section">
+    <p><span class="highlight">Worried your experiment might be missing a control, or has hidden confounding?</span><br>
+    Antonii flags common design pitfalls before you begin — saving time, effort, and failed runs.</p>
+    <a class="video-link" href="https://youtu.be/lU3heCLoDms" target="_blank">
+      🔗 Quick Design Check: Watch 1-minute instruction video on YouTube
+    </a>
+  </section>
 
-  <br>
-  <br>
-  
-  <p><span class="highlight">Not confident in your full factorial DOE stats? Unsure how to interpret interactions?</span><br>
-  Upload your data and let Antonii run ANOVA with a plain-language explanation to help you learn as you go.</p>
-  <a class="video-link" href="https://youtu.be/1jazDCWDlI0" target="_blank">
-    🔗 Analyze Results: Watch 1-minute instruction video on YouTube
-  </a>
+  <section class="step-section">
+    <p><span class="highlight">Tight on budget? Too many combinations? Not sure what design to use?</span><br>
+    Antonii recommends a design that fits your goals and constraints — and generates a matrix if you're ready.</p>
+    <a class="video-link" href="https://youtu.be/_Q_alzUvZmg" target="_blank">
+      🔗 Design Experiment (DOE): Watch 1-minute instruction video on YouTube
+    </a>
+  </section>
+
+  <section class="step-section">
+    <p><span class="highlight">Not confident in your full factorial DOE stats? Unsure how to interpret interactions?</span><br>
+    Upload your data and let Antonii run ANOVA with a plain-language explanation to help you learn as you go.</p>
+    <a class="video-link" href="https://youtu.be/1jazDCWDlI0" target="_blank">
+      🔗 Analyze Results: Watch 1-minute instruction video on YouTube
+    </a>
+  </section>
 
   <div style="margin-top: 3em;">
     <a class="cta-button" href="https://antonii-avatarsbio.streamlit.app" target="_blank">
@@ -122,3 +118,4 @@
 
 </body>
 </html>
+
