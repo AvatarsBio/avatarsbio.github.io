@@ -1,0 +1,46 @@
+/* Local IBM Plex Mono */
+@font-face{
+  font-family:"IBMPlex Mono";
+  src:url("../fonts/ibm-plex-mono/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"IBMPlex Mono";
+  src:url("../fonts/ibm-plex-mono/IBMPlexMono-Medium.woff2") format("woff2");
+  font-weight:500; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"IBMPlex Mono";
+  src:url("../fonts/ibm-plex-mono/IBMPlexMono-Bold.woff2") format("woff2");
+  font-weight:700; font-style:normal; font-display:swap;
+}
+
+/* Tokens */
+:root{
+  --accent:#FF914D;
+  --fg:#111; --muted:#555;
+  --maxw:880px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; padding:5em 1.5em;
+  font-family:"IBMPlex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color:var(--fg); text-align:center; line-height:1.55;
+}
+main{max-width:var(--maxw); margin:0 auto}
+h1{font-size:2.5em; color:var(--accent); margin:.2em 0}
+p{font-size:1.1em; color:var(--muted)}
+a{color:inherit}
+
+/* Buttons */
+.cta-button{
+  display:inline-block; padding:12px 24px;
+  background-color:var(--accent); color:#fff; text-decoration:none;
+  border-radius:6px; font-weight:700; font-size:1.05em;
+}
+
+/* Footer */
+footer{margin-top:4em; font-size:.9em; color:#777}
