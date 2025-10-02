@@ -1,77 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AvatarsBio – Digital Tools and Twins for Better Science</title> 
-    <meta name="description" content="AvatarsBio builds scientist-friendly digital twins and AI copilots that support experiment design, resource optimization, and smarter decision-making. Try Antonii – a modular planning assistant that helps reduce waste and accelerate discovery.">
-    <meta name="keywords" content="digital twins, AI copilots, experiment planning, design of experiments, research tools, scientist tools, Antonii, GPT assistant, lab AI, resource optimization">
-    <meta property="og:title" content="AvatarsBio – Tools for Better Science">
-    <meta property="og:description" content="Antonii is our first AI copilot — a modular experiment design assistant to help scientists save time and avoid costly mistakes."> 
-    <meta property="og:url" content="https://avatarsbio.com">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://avatarsbio.com/preview.jpg" />
-
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'IBM Plex Mono', monospace;
-            text-align: center;
-            padding: 5em;
-        }
-        h1 {
-            font-size: 2.5em;
-            color: #ff6600;
-        }
-        p {
-            font-size: 1.2em;
-            color: #333;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #ff6600;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 1.1em;
-            margin-top: 1em;
-		}	
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AvatarsBio – Digital Tools and Twins for Better Science</title>
+  <meta name="description" content="AvatarsBio builds scientist-friendly digital twins and AI copilots that support experiment design, resource optimization, and smarter decision-making.">
+  <meta name="keywords" content="digital twins, AI copilots, experiment planning, design of experiments, research tools, scientist tools, Antonii, GPT assistant, lab AI, resource optimization">
+  <meta property="og:title" content="AvatarsBio – Tools for Better Science">
+  <meta property="og:description" content="Biology-first digital twins and AI copilots that help scientists do better science.">
+  <meta property="og:url" content="https://avatarsbio.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://avatarsbio.com/preview.jpg" />
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <h1>We help you do better science.</h1>
+  <main>
+    <h1>We help you do better science.</h1>
 
-  <p style="margin-top: 0.9em; font-size: 1.1em; color: #555;">
-    AvatarsBio is a concept lab that builds and offers digital twins and AI copilot tools that support scientists in experiment planning, decision-making, and discovery.
-  </p>  
-    
-  <p style="margin-top: 4.0em;">
-    <a href="https://antonii-avatarsbio.streamlit.app" target="_blank" class="cta-button">
-      Try Antonii
-    </a>
-  <div style="font-size: 1.0em; color: #555;">
-    Antonii is an experiment design planning assistant. A 10-minute check can save you months of repeat work.
-    <br>
-    <a href="/antonii/how-antonii-works.html" 
-     style="display: block; margin-top: 1.0em; color: #777; font-weight: normal; text-decoration: none;">
-      Click here to learn how it works.
-    </a> 
-  </div>
-  </p>  
-    
-  <p style="margin-top: 7.5em; font-size: 0.9em;">
-    <a href="https://linkedin.com/company/avatarsbio" target="_blank">
-      Follow or contact us on LinkedIn for updates and collaboration.
-    </a>
-  </p>
+    <p style="margin-top:.9em;">
+      AvatarsBio is a concept lab building digital twins and AI copilot tools that support experiment planning, decision-making, and discovery.
+    </p>
 
-  <footer style="margin-top: 4em; font-size: 0.8em; color: #777;">
-    <a href="privacy.html" style="color: #777; text-decoration: none;">Click here for Privacy Statement</a><br>
-    © 2025 AvatarsBio. All rights reserved.
-  </footer>
+    <p style="margin-top:3em;">
+      <a href="antonii/" class="cta-button">Explore Antonii (Sandbox)</a>
+    </p>
 
+    <p style="margin-top:1em; font-size:.95em;">
+      <a href="https://linkedin.com/company/avatarsbio" target="_blank" rel="noopener">
+        Follow or contact us on LinkedIn for updates and collaboration
+      </a>
+    </p>
+
+    <footer>
+      <a href="privacy.html" style="text-decoration:none;">Privacy Statement</a><br>
+      © <span id="y"></span> AvatarsBio. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
+
