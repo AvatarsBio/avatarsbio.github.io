@@ -42,17 +42,18 @@
 	<div id="footer-placeholder"></div>
 	<script>
 	  fetch('assets/snippets/footer.html')
-		.then(response => response.text())
+		.then(r => r.text())
 		.then(html => {
-		  document.getElementById('footer-placeholder').innerHTML = html;
+		  const el = document.getElementById('footer-placeholder');
+		  el.innerHTML = html;
+		  // ensure the year is set (scripts inside injected HTML don’t run)
+		  const y = el.querySelector('#y');
+		  if (y) y.textContent = new Date().getFullYear();
 		});
 	</script>
 
   </main>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
 
