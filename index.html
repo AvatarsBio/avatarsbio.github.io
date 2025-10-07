@@ -17,34 +17,37 @@
   <main>
     <h1>We help you do better science.</h1>
 
-    <p style="margin-top:.9em;">
+    <p style="margin-top:.9em; font-size:.95em;">
       AvatarsBio is a concept lab building digital twins and AI copilot tools that support experiment planning, decision-making, and discovery.
     </p>
 
 	<p style="margin-top: 4.0em;">
-	<a href="https://antonii-avatarsbio.streamlit.app" target="_blank" class="cta-button">
-	  Try Antonii
-	</a>
-	<div style="font-size: 1.0em; color: #555;">
-	Antonii is an experiment design planning assistant. A 10-minute check can save you months of repeat work.
-	<br>
-	<a href="/antonii/how-antonii-works.html" 
-	 style="display: block; margin-top: 1.0em; color: #777; font-weight: normal; text-decoration: none;">
-	  Click here to learn how it works.
-	</a> 
+	<div style="margin-top:3em;">
+	  <a class="sandbox-link" href="sandbox/" target="_self">
+		<img src="assets/img/sandbox.png" alt="Sandbox: early concept tools">
+		<div class="sandbox-caption">
+		  Click on the icon to explore our early mock-ups and lite MVPs in the Sandbox.
+		</div>
+	  </a>
 	</div>
 	</p> 
 
-    <p style="margin-top:7.5em; font-size:.95em;">
+
+    <p style="margin-top:7.5em; font-size:.85em;">
       <a href="https://linkedin.com/company/avatarsbio" target="_blank" rel="noopener">
         Follow or contact us on LinkedIn for updates and collaboration
       </a>
     </p>
 
-    <footer>
-      <a href="privacy.html" style="text-decoration:none;">Privacy Statement</a><br>
-      © <span id="y"></span> AvatarsBio. All rights reserved.
-    </footer>
+	<div id="footer-placeholder"></div>
+	<script>
+	  fetch('assets/snippets/footer.html')
+		.then(response => response.text())
+		.then(html => {
+		  document.getElementById('footer-placeholder').innerHTML = html;
+		});
+	</script>
+
   </main>
 
   <script>

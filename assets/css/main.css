@@ -44,3 +44,8 @@ a{color:inherit}
 
 /* Footer */
 footer{margin-top:4em; font-size:.9em; color:#777}
+
+
+.sandbox-link{display:inline-flex; flex-direction:column; align-items:center; gap:10px; text-decoration:none}
+.sandbox-link img{width:88px; height:auto; display:block}
+.sandbox-caption{max-width:56ch; font-size:.95em; color:#555}

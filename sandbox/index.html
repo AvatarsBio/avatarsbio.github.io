@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandbox | AvatarsBio</title>
+  <meta name="description" content="Explore AvatarsBio sandbox tools — early mock-ups and lite MVPs aligned with the EU AI Act vision for safe, transparent AI.">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <main>
+    <h1>Sandbox</h1>
+
+    <p style="max-width:56ch; margin:1em auto; font-size:0.9em;">
+      A sandbox is a space we share early mock-ups and lite MVPs — minimal, conceptual, and sometimes still tuning data integration. 
+      These tools are tested enough to explore, but not yet ready for full-scale validation. 
+      This staged approach aligns with the EU AI Act’s goals for safe, transparent AI development.
+    </p>
+
+    <!-- Antonii Section -->
+    <div style="margin-top:5em;">
+      <a href="https://antonii-avatarsbio.streamlit.app" target="_blank" class="cta-button">
+        Try Antonii
+      </a>
+      <div style="font-size:1em; color:#555; margin-top:1em;">
+        Antonii is an experiment design planning assistant. A 10-minute check can save months of repeat work.
+        <br>
+        <a href="../antonii/how-antonii-works.html" 
+           style="display:block; margin-top:1em; color:#777; font-weight:normal; text-decoration:none;">
+          Click here to learn how it works.
+        </a>
+      </div>
+    </div>
+
+    <!-- Back link -->
+    <p style="margin-top:4em;">
+      <a href="../" style="text-decoration:none;">← Back to AvatarsBio Home</a>
+    </p>
+
+
+	<div id="footer-placeholder"></div>
+	<script>
+	  fetch('assets/snippets/footer.html')
+		.then(response => response.text())
+		.then(html => {
+		  document.getElementById('footer-placeholder').innerHTML = html;
+		});
+	</script>
+
+</body>
+</html>
