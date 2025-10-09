@@ -33,7 +33,10 @@ body{
 main{max-width:var(--maxw); margin:0 auto}
 h1{font-size:2.5em; color:var(--accent); margin:.2em 0}
 p{font-size:1.1em; color:var(--muted)}
-a{color:inherit}
+a{
+  color: #FF914D;
+  text-decoration: none;
+}
 
 /* Buttons */
 .cta-button{
