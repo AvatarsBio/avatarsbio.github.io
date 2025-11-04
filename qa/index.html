@@ -16,6 +16,10 @@
 		background-size: 16px 16px;	  	
 		cursor: pointer;
 	  }
+	  details > summary:focus {
+		outline: 2px solid rgba(255,145,77,0.6);
+		outline-offset: 2px;
+	  }
   </style>
 </head>
 <body>
@@ -36,7 +40,7 @@
 
 		<details>
 		  <summary><strong>What is AvatarsBio?</strong></summary>
-		  <p>AvatarsBio is currently a Biotech x AI concept lab based in the Netherlands. We build digital twins and AI assistants that help scientists plan, simulate, and interpret experiments — faster, safer, and with less waste.</p>
+		  <p>AvatarsBio is currently a Biotech x AI concept lab based in the Netherlands. We build modular digital twins and AI assistants that help scientists plan, simulate, and interpret experiments — faster, safer, and with less waste.</p>
 		</details>
 
 		<details>
@@ -52,7 +56,7 @@
 
 		<details>
 		  <summary><strong>Why AvatarsBio? What makes you qualified to build this?</strong></summary>
-		  <p>AvatarsBio was founded by a scientist-engineer with 20+ years of experience bridging organ-on-chip R&amp;D, data workflows, and low-code automation. We’ve seen how fragmented experimental planning can be and build tools that make reasoning more transparent, not more opaque.</p>
+		  <p>AvatarsBio was founded by a scientist-engineer with 20+ years of experience across the life science value chain bridging organ-on-chip R&amp;D, bioproduction, data workflows, and automation. We’ve seen how fragmented experimental planning can be and build tools that make reasoning more transparent, not more opaque.</p>
 		</details>
 
 		<details>
@@ -98,7 +102,7 @@
 		<details>
 		  <summary><strong>Can a digital twin really capture the complexity of cell biology or organ-on-chips?</strong></summary>
 		  <p>That’s a fair — and healthy — question. No digital twin may reproduce every interaction inside a living system. But that’s not the goal, nor is it necessary in our view. The value lies in simulating specific aspects to plan and understand better, not everything.</p>
-		  <p>We also often see a gap between what complex systems can generate and what our analyses can interpret. For example, organ-on-chip technologies can mimic flow, tissue architecture, and cell-cell communication — yet their data are often analyzed as if they were simple cell cultures. It’s like building a Formula 1 car and judging its performance by checking the tire pressure.</p>
+		  <p>We also often see a gap between what in vitro complex systems can generate and what our analyses can interpret. For example, organ-on-chip technologies can mimic flow, tissue architecture, and cell-cell communication — yet their data are often analyzed as if they were simple cell cultures. It’s like building a Formula 1 car and judging its performance by checking the tire pressure.</p>
 		  <p>Consider something as common as a cell-viability assay. In a 3D spheroid or perfused chip, the result isn’t just “are the cells alive?” but also whether and how much of the dye or compound even reaches the inner core. What looks like reduced viability may actually reflect limited penetration or transport dynamics.</p>
 		  <p>Digital twins help bridge that gap. They let us explore patterns, test ideas, and refine experiments before returning to the lab — turning data into insight. In a way, traditional cell models are just partial simulations of biology, capturing aspects such as toxicity or permeability. Digital twins simply extend that idea into the virtual space, where learning happens faster and with less waste.</p>
 		</details>
@@ -178,6 +182,7 @@
   </main>
   
   <script>
+	  // --- Search Functionality ---
 	  const searchInput = document.getElementById('qa-search');
 	  const qaList = document.getElementById('qa-list');
 
@@ -190,6 +195,18 @@
 		  } else {
 			const text = el.textContent.toLowerCase();
 			el.style.display = text.includes(query) ? '' : 'none';
+		  }
+		});
+	  });
+
+	  // --- Accordion Behavior (only one open at a time) ---
+	  const items = document.querySelectorAll('#qa-list details');
+	  items.forEach((d) => {
+		d.addEventListener('toggle', function () {
+		  if (this.open) {
+			items.forEach((other) => {
+			  if (other !== this) other.removeAttribute('open');
+			});
 		  }
 		});
 	  });
