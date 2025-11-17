@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play | AvatarsBio</title>
+  <meta name="description" content="Explore playful, experimental mini-experiences inspired by cell biology — light, intuitive interactions from the AvatarsBio creative corner.">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+  <main>
+
+    <!-- Page Title -->
+    <h1>
+      Let's Play
+    </h1>
+
+    <!-- Intro -->
+    <p style="max-width:96ch; margin:1.2em auto 2em auto; font-size:0.9em; line-height:1.5;">
+      A small corner where we gamify ideas — light, fun, and inspired by living systems.
+      These interactive projects explore the human side of science: curiosity, intuition, and
+      low-pressure experimentation. They sit beside our scientific tools as creative sparks,
+      because that's what being human is.
+    </p>
+
+    <!-- Shared style for headers -->
+    <style>
+      h2.play-section {
+        margin-top: 3.5em;
+        font-size: 1.3em;
+        color: #ff914d;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-bottom: 1px solid rgba(255,145,77,0.3);
+        display: inline-block;
+        padding-bottom: 0.25em;
+      }
+    </style>
+
+    <!-- Hepatocyte Cell Avatar -->
+    <h2 class="play-section">Hepatocyte Pet</h2>
+    <div style="margin-top:1em;">
+      <a href="https://deluxe-medovik-b7e716.netlify.app/" target="_blank" class="cta-button">
+        Play Now
+      </a>
+      <div style="font-size:1em; color:#555; margin-top:0.9em; max-width:90ch; line-height:1.5;">
+        A light, educational mini-game where you interact with a stylized hepatocyte.  
+        Maintain its energy, balance its environment, and watch how small decisions shape cell health.
+      </div>
+    </div>
+
+    <!-- Lab Survival -->
+    <h2 class="play-section">Lab Survival</h2>
+    <div style="margin-top:1em;">
+      <a href="https://ornate-figolla-572d8c.netlify.app/" target="_blank" class="cta-button">
+        Play Now
+      </a>
+      <div style="font-size:1em; color:#555; margin-top:0.9em; max-width:90ch; line-height:1.5;">
+        A fast, K-pop inspired game that teaches proper cell culture habits.  
+        Manage CO₂ levels, avoid contamination, and complete timed lab challenges —
+        a playful take on real wet-lab workflows.
+      </div>
+    </div>
+
+    <!-- Educational Potential -->
+    <h2 class="play-section" style="margin-top:4.5em;">Educational Potential</h2>
+    <p style="max-width:128ch; margin-top:1em; font-size:0.9em; color:#555; line-height:1.55;">
+      While these began as creative experiments, each mirrors real laboratory intuition.
+      With refinement, they could evolve into lightweight teaching tools for students,
+      interns, and new lab users:
+    </p>
+    <ul style="font-size:0.9em; color:#555; line-height:1.5; margin-top:0.5em;">
+      <li><b>Hepatocyte Cell Avatar</b> introduces basic ideas of cell health, energy balance, and homeostasis.</li>
+      <li><b>Lab Survival</b> reinforces proper culture technique — timing, contamination awareness, and workflow discipline.</li>
+    </ul>
+
+
+    <!-- Contact -->
+    <p style="margin-top:5em; font-size:0.9em;">
+      Interested in early versions or collaboration? 
+      <a href="https://linkedin.com/company/avatarsbio" target="_blank" rel="noopener">Reach out via LinkedIn</a>.
+    </p>
+
+    <!-- Back link -->
+    <p style="margin-top:5em; font-size:0.9em;">
+      <a href="../" style="text-decoration:none;">← Back to AvatarsBio Home</a>
+    </p>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('../assets/snippets/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const el = document.getElementById('footer-placeholder');
+          el.innerHTML = html;
+          const y = el.querySelector('#y');
+          if (y) y.textContent = new Date().getFullYear();
+        });
+    </script>
+
+  </main>
+</body>
+</html>
