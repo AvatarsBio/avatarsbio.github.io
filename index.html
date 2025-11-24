@@ -15,11 +15,13 @@
 </head>
 <body>
   <main>
-  
-    <h1>Less weekends in the lab,<br>More family time.</h1>
 
-    <p style="margin-top:.9em; font-size:.95em;">
-      AvatarsBio is a Biotech x AI concept lab building digital twins and copilot tools that support experiment planning, decision-making, and discovery.
+	<h1 id="tagline" style="transition: opacity 0.8s ease;">
+	  We help you do <br>Better science.
+	</h1>
+  
+    <p style="margin-top:2em; font-size:.95em;">
+      AvatarsBio is a Biotech x AI concept lab building digital twins and copilot tools that support smart experiment planning, decision-making, and discovery.
     </p>
 
 	<p style="margin-top: 4.0em;">
@@ -74,6 +76,32 @@
 		  const y = el.querySelector('#y');
 		  if (y) y.textContent = new Date().getFullYear();
 		});
+	</script>
+
+	<!-- Rotating tagline script -->
+	<script>
+	  const taglines = [
+		"We help you do <br>Better science.",
+		"Less weekends in the lab,<br>More family time.",
+		"Creativity is <br>Intelligence having fun."
+	  ];
+
+	  let idx = 0;
+	  const el = document.getElementById("tagline");
+
+	  setInterval(() => {
+	    // fade out
+		el.style.opacity = 0;
+
+		setTimeout(() => {
+		  // switch text
+		  idx = (idx + 1) % taglines.length;
+		  el.innerHTML = taglines[idx]; // preserves <br>
+		  
+		  // fade back in
+		  el.style.opacity = 1;
+		}, 800); // matches fade duration
+	  }, 5000); // switch every 5 seconds
 	</script>
 
   </main>
