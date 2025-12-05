@@ -20,6 +20,10 @@
 		outline: 2px solid rgba(255,145,77,0.6);
 		outline-offset: 2px;
 	  }
+	  /* Prevent summary from becoming blue during focus-card mode */
+		.qa-focus-open summary {
+		outline: none !important;
+	  }
   </style>
 </head>
 <body>
@@ -61,8 +65,8 @@
 			<a href="https://www.linkedin.com/in/matrixfluidics" target="_blank" rel="noopener" style="color:#ff914d; text-decoration:none;">
 			  scientist-engineer with 20+ years of experience
 			</a>
-			across the life science value chain, bridging organ-on-chip R&amp;D, bioproduction, data workflows, and automation.
-			We’ve seen how fragmented experimental planning can be and build tools that make reasoning more transparent, not more opaque.
+			across the life science value chain, bridging organ-on-chip R&amp;D, bioproduction, data workflows, and automation.<br>
+			The founder has seen how fragmented experimental planning can be in life science, and is building tools that make reasoning more transparent — not more opaque.
 		  </p>
 		</details>
 
@@ -213,6 +217,34 @@
 		  <a class="btn" style="margin-left:.5rem" href="https://linkedin.com/company/avatarsbio" target="_blank" rel="noopener">Ask on LinkedIn</a>
 		</div>
 	</div>
+	
+	<!-- Zoom-in overlay and card -->
+	<div id="qa-overlay" style="
+	  display:none;
+	  position:fixed;
+	  top:0; left:0;
+	  width:100%; height:100%;
+	  background:rgba(0,0,0,0.45);
+	  backdrop-filter:blur(2px);
+	  z-index:999;
+	  justify-content:center;
+	  align-items:center;
+	  padding:1.5rem;
+	">
+	  <div id="qa-focus-card" style="
+		background:white;
+		padding:1.5rem 1.75rem;
+		border-radius:14px;
+		max-width:700px;
+		max-height:80vh;
+		overflow-y:auto;
+		box-shadow:0 12px 32px rgba(0,0,0,0.25);
+		line-height:1.55;
+	  ">
+		<!-- Content inserted dynamically -->
+	  </div>
+	</div>
+
   </main>
   
   <script>
@@ -243,6 +275,58 @@
 			});
 		  }
 		});
+	  });
+  </script>
+
+  <script>
+	  // --- Zoom-in Focus Mode (Version 1) ---
+	  const overlay = document.getElementById('qa-overlay');
+	  const focusCard = document.getElementById('qa-focus-card');
+
+	  document.querySelectorAll('#qa-list details summary').forEach(summary => {
+		summary.addEventListener('click', function (e) {
+		  e.preventDefault(); // prevent standard toggle
+		  const parent = this.parentElement;
+
+		  // Get the question & answer HTML
+		  const question = this.innerHTML;
+		  const answer = Array.from(parent.querySelectorAll('p'))
+			.map(p => `<p>${p.innerHTML}</p>`)
+			.join("");
+
+		  // Inject into focus card
+		  focusCard.innerHTML = `
+			<h3 style="margin-top:0;">${question}</h3>
+			${answer}
+			<div style="text-align:right; margin-top:1.5rem;">
+			  <button id="qa-close" style="
+				padding:8px 16px;
+				border:1px solid #ccc;
+				border-radius:8px;
+				background:#fafafa;
+				cursor:pointer;
+			  ">Close</button>
+			</div>
+		  `;
+
+		  // Show overlay
+		  overlay.style.display = "flex";
+		  document.body.classList.add("qa-focus-open");
+
+		  // Close button
+		  focusCard.querySelector('#qa-close').onclick = () => {
+			overlay.style.display = "none";
+			document.body.classList.remove("qa-focus-open");
+		  };
+		});
+	  });
+
+	  // Close overlay when clicking outside the card
+	  overlay.addEventListener('click', function(e) {
+		if (e.target === overlay) {
+		  overlay.style.display = "none";
+		  document.body.classList.remove("qa-focus-open");
+		}
 	  });
   </script>
   
