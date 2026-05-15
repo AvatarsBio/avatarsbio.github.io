@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Notes | AvatarsBio</title>
+  <meta name="description" content="Research notes, pipelines, and exploratory frameworks developed behind the scenes at AvatarsBio.">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <main>
+    <h1>Research Notes</h1>
+
+	<!-- Intro -->
+	<p style="max-width:96ch; margin:1.2em auto 2em auto; font-size:0.9em; line-height:1.5;">
+	  Research notes, pipelines, and exploratory frameworks developed behind the scenes at AvatarsBio.
+	  <br><br>
+	  Putting into practice ideas for more transparent, accessible, and resource-efficient scientific workflows.
+	</p>
+
+    <!-- Shared style for section headers -->
+    <style>
+      h2.research-section {
+        margin-top: 4em;
+        font-size: 1.3em;
+        color: #ff914d;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-bottom: 1px solid rgba(255,145,77,0.3);
+        display: inline-block;
+        padding-bottom: 0.25em;
+      }
+    </style>
+
+    <!-- WHITE PAPERS -->
+    <h2 class="research-section">White Papers</h2>
+
+    <!-- ARTUR -->
+    <div style="margin-top:1.5em;">
+      <a href="pdfs/artur-data-curation.pdf" target="_blank" class="cta-button">
+        ARTUR
+      </a>
+      <div style="font-size:1em; color:#555; margin-top:0.9em; max-width:90ch; margin-left:auto; margin-right:auto; line-height:1.5;">
+        A hybrid workflow for efficient scientific data curation at scale.
+        <br>
+        <span style="color:#777;">2,747 scientific records audited for USD 1.77.</span>
+      </div>
+    </div>
+
+    <!-- Design Before Prediction -->
+    <div style="margin-top:5.25em;">
+      <a href="pdfs/design-before-prediction-doe-ml.pdf" target="_blank" class="cta-button">
+        Design Before Prediction
+      </a>
+      <div style="font-size:1em; color:#555; margin-top:0.9em; max-width:90ch; margin-left:auto; margin-right:auto; line-height:1.5;">
+        Before running everything, decide which complexity deserves to be modelled.
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <p style="margin-top:6em; font-size:0.9em;">
+      Interested in applying similar approaches to your workflows or research challenges? <br>
+      <a href="https://linkedin.com/company/avatarsbio" target="_blank" rel="noopener">
+        Reach out via LinkedIn
+      </a>.
+    </p>
+
+    <!-- Back link -->
+    <p style="margin-top:6em; font-size:0.9em;">
+      <a href="../" style="text-decoration:none;">← Back to AvatarsBio Home</a>
+    </p>
+
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('../assets/snippets/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const el = document.getElementById('footer-placeholder');
+          el.innerHTML = html;
+          const y = el.querySelector('#y');
+          if (y) y.textContent = new Date().getFullYear();
+        });
+    </script>
+
+  </main>
+</body>
+</html>
