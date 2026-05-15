@@ -15,6 +15,8 @@
   font-weight:700; font-style:normal; font-display:swap;
 }
 
+
+
 /* Tokens */
 :root{
   --accent:#FF914D;
@@ -36,6 +38,16 @@ p{font-size:1.1em; color:var(--muted)}
 a{
   color: #FF914D;
   text-decoration: none;
+}
+
+/* Rotating header */
+.rotating-header,
+.rotating-header a,
+.rotating-header a:visited,
+.rotating-header a:hover,
+.rotating-header a:active{
+  color:#FF914D !important;
+  text-decoration:none;
 }
 
 /* Buttons */
